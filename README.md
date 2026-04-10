@@ -9,4 +9,7 @@
 
 ## About This Project
 
-Project Digital Business by Muhammad Asifurrohman - 25.12.3722 - Site: https://project-digital-business-main-1h8hdk.free.laravel.cloud/
+<p>Project Digital Business by Muhammad Asifurrohman - 25.12.3722 - Site: https://project-digital-business-main-1h8hdk.free.laravel.cloud/</p>
+<p>Link halaman profil: https://project-digital-business-main-1h8hdk.free.laravel.cloud/profil</p>
+<p>Link halaman kontak: https://project-digital-business-main-1h8hdk.free.laravel.cloud/kontak</p>
+<p>Link halaman bantuan: https://project-digital-business-main-1h8hdk.free.laravel.cloud/bantuan</p>
