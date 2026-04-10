@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Ini halaman profile</h1>
+    <h1>Ini halaman profile</h1>
 </body>
 </html>
