@@ -22,8 +22,7 @@
 <body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
-    <nav
-        class="glass sticky top-8 z-40 mx-4 mt-4 px-6 py-4 rounded-2xl border border-white/20 shadow-lg flex justify-between items-center">
+    <nav class="glass sticky top-8 z-40 mx-4 mt-4 px-6 py-4 rounded-2xl border border-white/20 shadow-lg flex justify-between items-center">
         <div class="flex items-center gap-2">
             <div
                 class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">

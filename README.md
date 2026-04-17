@@ -10,6 +10,20 @@
 ## About This Project
 
 <p>Project Digital Business by Muhammad Asifurrohman - 25.12.3722 - Site: https://project-digital-business-main-1h8hdk.free.laravel.cloud/</p>
+
+<h2>Praktikum 2</h2>
 <p>Link halaman profil: https://project-digital-business-main-1h8hdk.free.laravel.cloud/profil</p>
 <p>Link halaman kontak: https://project-digital-business-main-1h8hdk.free.laravel.cloud/kontak</p>
 <p>Link halaman bantuan: https://project-digital-business-main-1h8hdk.free.laravel.cloud/bantuan</p>
+
+<h2>Praktikum 3</h2>
+<p>Link halaman event-detail: https://project-digital-business-main-1h8hdk.free.laravel.cloud/event/1</p>
+<p>Link halaman checkout: https://project-digital-business-main-1h8hdk.free.laravel.cloud/checkout</p>
+<p>Link halaman ticket: https://project-digital-business-main-1h8hdk.free.laravel.cloud/my-ticket</p>
+<p>Link halaman admin dashboard: https://project-digital-business-main-1h8hdk.free.laravel.cloud/admin</p>
+<p>
+    Link halaman admin events: https://project-digital-business-main-1h8hdk.free.laravel.cloud/admin/events
+</p>
+<p>
+Link halaman admin transactions: https://project-digital-business-main-1h8hdk.free.laravel.cloud/admin/transactions
+</p>
