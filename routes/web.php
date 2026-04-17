@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return '<h1>25.12.3722 - Muhammad Asifurrohman</h1>';
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/event/1', [EventController::class, 'show'])->name('events.show');
+Route::get('/checkout', [EventController::class, 'checkout'])->name('checkout');
 
 Route::get('/tentang', function () {
     return '<h1>Halaman tentang EventHub</h1>';
