@@ -27,3 +27,6 @@
 <p>
 Link halaman admin transactions: https://project-digital-business-main-1h8hdk.free.laravel.cloud/admin/transactions
 </p>
+
+<h2>Praktikum 4</h2>
+<p>Prakitkum tentang migration dan seeder</p>
