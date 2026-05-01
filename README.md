@@ -29,4 +29,7 @@ Link halaman admin transactions: https://project-digital-business-main-1h8hdk.fr
 </p>
 
 <h2>Praktikum 4</h2>
-<p>Prakitkum tentang migration dan seeder</p>
+<p>Prakitkum tentang migration dan seeder.</p>
+
+<h2>Praktikum 5</h2>
+<p>Prakitkum CRUD event pada bagian admin.</p>

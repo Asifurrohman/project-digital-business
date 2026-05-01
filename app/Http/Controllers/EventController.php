@@ -21,4 +21,8 @@ class EventController extends Controller
     public function transactions(){
         return view('admin.transactions');
     }
+
+    public function categories(){
+        return view('admin.categories.index');
+    }
 }

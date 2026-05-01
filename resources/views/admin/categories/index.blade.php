@@ -1,12 +1,13 @@
+
 @extends('layouts.admin')
 @section('content')
 <header class="flex justify-between items-center mb-10">
     <div>
-        <h1 class="text-3xl font-black">Kelola Event</h1>
-        <p class="text-slate-500 font-medium">Buat dan atur acara seru Anda di sini.</p>
+        <h1 class="text-3xl font-black">Kelola Kategori Event</h1>
+        <p class="text-slate-500 font-medium">Kelola kategori event di sini.</p>
     </div>
     <button class="px-6 py-3 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg shadow-indigo-100 hover:bg-indigo-700 active:scale-95 transition">
-        + Tambah Event Baru
+        + Tambah Kategori Baru
     </button>
 </header>
 
@@ -25,9 +26,7 @@
             <thead class="bg-slate-50 text-slate-400 uppercase text-[10px] font-black tracking-widest">
                 <tr>
                     <th class="px-8 py-4 w-16">No</th>
-                    <th class="px-8 py-4">Poster</th>
-                    <th class="px-8 py-4">Event</th>
-                    <th class="px-8 py-4">Harga / Stok</th>
+                    <th class="px-8 py-4">Kategori</th>
                     <th class="px-8 py-4">Aksi</th>
                 </tr>
             </thead>
@@ -35,15 +34,7 @@
                 <tr class="hover:bg-slate-50/50 transition">
                     <td class="px-8 py-6 font-bold text-slate-400">1</td>
                     <td class="px-8 py-6">
-                        <img src="assets/concert.png" class="w-16 h-20 rounded-xl object-cover shadow-sm">
-                    </td>
-                    <td class="px-8 py-6">
-                        <p class="font-black text-slate-800">Jazz Night 2024</p>
-                        <p class="text-xs text-slate-400">Musik • 16 Nov 2024</p>
-                    </td>
-                    <td class="px-8 py-6">
-                        <p class="font-bold text-indigo-600">Rp 150.000</p>
-                        <p class="text-xs text-slate-400">Stok: 42/100</p>
+                        <p class="font-semibold text-lg text-slate-800">Konser</p>
                     </td>
                     <td class="px-8 py-6">
                         <div class="flex gap-2">
@@ -65,15 +56,7 @@
                 <tr class="hover:bg-slate-50/50 transition">
                     <td class="px-8 py-6 font-bold text-slate-400">2</td>
                     <td class="px-8 py-6">
-                        <img src="assets/workshop.png" class="w-16 h-20 rounded-xl object-cover shadow-sm">
-                    </td>
-                    <td class="px-8 py-6">
-                        <p class="font-black text-slate-800">AI & Future Workshop</p>
-                        <p class="text-xs text-slate-400">Tech • 26 Oct 2024</p>
-                    </td>
-                    <td class="px-8 py-6">
-                        <p class="font-bold text-indigo-600">Rp 50.000</p>
-                        <p class="text-xs text-slate-400">Stok: 12/50</p>
+                        <p class="font-semibold text-lg text-slate-800">Workshop</p>
                     </td>
                     <td class="px-8 py-6">
                         <div class="flex gap-2">
