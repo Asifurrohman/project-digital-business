@@ -29,7 +29,11 @@
                         {{ $events->firstItem() + $index }}
                     </td>
                     <td class="px-8 py-6">
-                        <img src="https://placehold.co/16x20" class="w-16 h-20 rounded-xl object-cover shadow-sm">
+                        @if($event->poster_path)
+                            <img src="{{ asset('storage/'.$event->poster_path) }}" class="w-16 h-20 rounded-xl object-cover shadow-sm">
+                        @else
+                            <img src="https://placehold.co/16x20" class="w-16 h-20 rounded-xl object-cover shadow-sm">
+                        @endif
                         
                     </td>
                     <td class="px-8 py-6">
