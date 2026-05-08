@@ -11,12 +11,18 @@
 
 <p>Project Digital Business by Muhammad Asifurrohman - 25.12.3722 - Site: https://project-digital-business-main-1h8hdk.free.laravel.cloud/</p>
 
-<h2>Praktikum 2</h2>
+<h2>Tugas 1</h2>
+<h3>Instalasi Laravel dan Deploy ke Laravel Cloud</h3>
+<p>https://project-digital-business-main-1h8hdk.free.laravel.cloud/</p>
+
+<h2>Tugas 2</h2>
+<h3>Review Laravel</h3>
 <p>Link halaman profil: https://project-digital-business-main-1h8hdk.free.laravel.cloud/profil</p>
 <p>Link halaman kontak: https://project-digital-business-main-1h8hdk.free.laravel.cloud/kontak</p>
 <p>Link halaman bantuan: https://project-digital-business-main-1h8hdk.free.laravel.cloud/bantuan</p>
 
-<h2>Praktikum 3</h2>
+<h2>Tugas 3</h2>
+<h3>Memasang Laravel</h3>
 <p>Link halaman event-detail: https://project-digital-business-main-1h8hdk.free.laravel.cloud/event/1</p>
 <p>Link halaman checkout: https://project-digital-business-main-1h8hdk.free.laravel.cloud/checkout</p>
 <p>Link halaman ticket: https://project-digital-business-main-1h8hdk.free.laravel.cloud/my-ticket</p>
@@ -28,8 +34,5 @@
 Link halaman admin transactions: https://project-digital-business-main-1h8hdk.free.laravel.cloud/admin/transactions
 </p>
 
-<h2>Praktikum 4</h2>
-<p>Prakitkum tentang migration dan seeder.</p>
-
-<h2>Praktikum 5</h2>
-<p>Prakitkum CRUD event pada bagian admin.</p>
+<h2>Tugas 4</h2>
+<p>Seeding dan CRUD event pada bagian admin.</p>
