@@ -4,7 +4,7 @@
 @section('page_subtitle', 'Ubah detail acara.')
 
 @section('content')
-<div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm max-w-3xl">
+<div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm w-full">
     <form action="{{ route('admin.events.update', $event->id) }}" method="POST" enctype="multipart/form-data" class="space-y-6">
         @csrf
         @method('PUT')
@@ -44,9 +44,7 @@
             <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">
                 Deskripsi
             </label>
-            <textarea name="description" rows="4" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-600 outline-none transition font-medium">
-                {{ old('description', $event->description) }}
-            </textarea>
+            <textarea name="description" rows="4" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-600 outline-none transition font-medium">{{ old('description', $event->description) }}</textarea>
             @error('description')
             <span class="text-red-500 text-sm mt-1">
                 {{ $message }}
@@ -124,10 +122,10 @@
         </div>
         
         <div class="pt-4 flex justify-end gap-4 border-t border-slate-100">
-            <a href="{{ route('admin.events.index') }}" class="px-6 py-4 text-slate-500 font-bold hover:text-slate-800 transition">
+            <a href="{{ route('admin.events.index') }}" class="cursor-pointer px-6 py-4 text-slate-500 font-bold hover:text-slate-800 transition">
                 Batal
             </a>
-            <button type="submit" class="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg shadow-indigo-100 hover:bg-indigo-700 transition">
+            <button type="submit" class="cursor-pointer px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg shadow-indigo-100 hover:bg-indigo-700 transition">
                 Simpan Perubahan
             </button>
         </div>
