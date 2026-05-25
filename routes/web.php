@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventController as AdminEventController;
+use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TicketController;
@@ -21,6 +22,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
     Route::resource('events', AdminEventController::class);
     Route::resource('categories', CategoryController::class);
+    Route::resource('partners', PartnerController::class);
 });
 
 Route::get('/tentang', function () {

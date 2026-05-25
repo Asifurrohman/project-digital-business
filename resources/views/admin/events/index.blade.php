@@ -13,12 +13,22 @@
 
 <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden">
     <div class="px-8 py-6 bg-slate-50/50 border-b flex gap-4">
-        <input type="text" placeholder="Cari nama event..." class="flex-1 px-5 py-3 rounded-xl border-slate-200 border bg-white focus:ring-2 focus:ring-indigo-500 outline-none transition">
-        <select class="px-5 py-3 rounded-xl border-slate-200 border bg-white outline-none">
-            <option>Semua Kategori</option>
-            <option>Musik</option>
-            <option>Workshop</option>
-        </select>
+        <form action="{{ route('admin.events.index') }}" method="GET" class="flex gap-2 w-full">
+            <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari nama event..." class="flex-1 px-5 py-3 rounded-xl border-slate-200 border bg-white focus:ring-2 focus:ring-indigo-500 outline-none transition">
+            
+            <select name="category_id" class="px-5 py-3 rounded-xl border-slate-200 border bg-white outline-none">
+                <option value="">Semua Kategori</option>
+                @foreach($categories as $category)
+                <option value="{{ $category->id }}" {{ request('category_id') == $category->id ? 'selected' : '' }}>
+                    {{ $category->name }}
+                </option>
+                @endforeach
+            </select>
+            
+            <button type="submit" class="cursor-pointer px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition">
+                Cari
+            </button>
+        </form>
     </div>
     <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse">
@@ -39,9 +49,9 @@
                     </td>
                     <td class="px-8 py-6">
                         @if($event->poster_path)
-                            <img src="{{ asset('storage/'.$event->poster_path) }}" class="w-16 h-20 rounded-xl object-cover shadow-sm">
+                        <img src="{{ asset('storage/'.$event->poster_path) }}" class="w-16 h-20 rounded-xl object-cover shadow-sm">
                         @else
-                            <img src="https://placehold.co/16x20" class="w-16 h-20 rounded-xl object-cover shadow-sm">
+                        <img src="https://placehold.co/16x20" class="w-16 h-20 rounded-xl object-cover shadow-sm">
                         @endif
                         
                     </td>

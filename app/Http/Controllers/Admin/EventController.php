@@ -13,10 +13,20 @@ class EventController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Event $event)
+    public function index(Request $request)
     {
-        $events = Event::with('category')->latest()->paginate(10);
-        return view('admin.events.index', compact('events'));
+        // $events = Event::with('category')->latest()->paginate(10);
+        // return view('admin.events.index', compact('events'));
+
+        $categories = Category::all();
+
+        $events = Event::query()->when($request->search, function($query, $search){
+            $query->where('title', 'like', "%{$search}%");
+        })->when($request->category_id, function ($query, $categoryId) {
+            $query->where('category_id', $categoryId);
+        })->with('category')->latest()->paginate(10)->withQueryString();
+
+        return view('admin.events.index', compact('events', 'categories'));
     }
 
     /**

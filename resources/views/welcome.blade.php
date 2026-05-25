@@ -105,4 +105,28 @@
         @endforelse
     </div>
 </section>
+
+<section id="partners" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="flex justify-between items-end mb-12">
+        <div>
+            <h2 class="text-3xl font-extrabold mb-2">Partner</h2>
+            <p class="text-slate-500 font-medium">Partner kami yang hebat!</p>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+        @forelse ($partners as $partner)
+        <div class="group flex flex-col items-center gap-4 p-4 bg-white rounded-2xl transition">
+        <img src="{{ $partner->logo_url ?? '$partner->name' }}" alt="{{ $partner->name }}" class="h-40 w-40 object-cover group-hover:scale-110 transition-transform duration-500">
+        <p class="text-center font-medium text-slate-700 mt-2">{{ $partner->name }}</p>
+        </div>
+        @empty
+        <div class="col-span-full text-center py-20">
+            <h2 class="text-2xl font-bold text-slate-500">
+                Partner Kosong
+            </h2>
+        </div>
+        @endforelse
+    </div>
+</section>
 @endsection

@@ -5,7 +5,7 @@
 
 @section('content')
 <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm w-full">
-    <form action="{{ route('admin.categories.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
+    <form action="{{ route('admin.categories.store') }}" method="POST" class="space-y-6">
         @csrf
         <div>
             <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Nama Kategori</label>
