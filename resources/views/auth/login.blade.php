@@ -14,30 +14,37 @@
                 AH
             </div>
             <h1 class="text-2xl font-black">Admin Login</h1>
-            <p class="text-slate-500">AmikomEventHub Dashboard</p>
+            <p class="text-slate-500">Amikom EventHub Dashboard</p>
         </div>
-
+        
         @if(session('error'))
         <div class="bg-red-100 text-red-600 p-4 rounded-xl mb-6 font-bold text sm text-center">
             {{ session('error') }}
         </div>
         @endif
-            
+        
         <form action="{{ route('admin.login.post') }}" method="POST" class="space-y6">
             @csrf
+
+            @error('email')
+            <div class="text-red-600 text-sm px-4 py-1.5 bg-red-200 border border-red-600 rounded-xl mb-8">
+                {{ $message }}
+            </div>
+            @enderror
+
             <div>
                 <label for="" class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">
                     Email
                 </label>
                 <input type="email" name="email" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-600 outline-none transition font-medium" required>
             </div>
-            <div>
+            <div class="mt-4">
                 <label for="" class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">
                     password
                 </label>
                 <input type="password" name="password" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-600 outline-none transition font-medium" required>
             </div>
-            <button type="submit" class="w-full py-4 bg-indigo-600 text-white rounded-2xl font-black text-xl shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition">
+            <button type="submit" class="mt-8 w-full py-4 bg-indigo-600 text-white rounded-2xl font-black text-xl shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition">
                 Login
             </button>
         </form>

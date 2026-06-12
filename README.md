@@ -37,3 +37,9 @@ Link halaman admin transactions: https://project-digital-business-main-1h8hdk.fr
 <h2>Tugas 4</h2>
 <p>Seeding dan CRUD event pada bagian admin.</p>
 <p>Link halaman admin event: https://project-digital-business-main-1h8hdk.free.laravel.cloud/admin/events</p>
+
+<h2>Tugas Pertemuan 8</h2>
+<p>Autentikasi dan Middleware</p>
+
+<h2>Tugas Pertemuan 10</h2>
+<p>Transaksi user dan tampil transaksi di halaman atmin</p>
