@@ -40,6 +40,8 @@ Link halaman admin transactions: https://project-digital-business-main-1h8hdk.fr
 
 <h2>Tugas Pertemuan 8</h2>
 <p>Autentikasi dan Middleware</p>
+<p>Link: https://project-digital-business-main-1h8hdk.free.laravel.cloud/admin</p>
 
 <h2>Tugas Pertemuan 10</h2>
 <p>Transaksi user dan tampil transaksi di halaman atmin</p>
+<p>Link: https://project-digital-business-main-1h8hdk.free.laravel.cloud/checkout/1</p>
