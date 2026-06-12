@@ -111,5 +111,26 @@ class DatabaseSeeder extends Seeder
             'stock' => 100,
             'poster_path' => 'posters/event-3.png',
         ]);
+
+    //     Gallery::create([
+            
+    //         'caption' => 'Caption 1',
+    //         'image' => 'gambar2.jpg'
+        
+    // ]);
+
+    //     Gallery::create([
+            
+    //             'caption' => 'Caption 2',
+    //             'image' => 'gambar2.jpg'
+            
+    //     ]);
+
+    //     Gallery::create([
+            
+    //             'caption' => 'Caption 3',
+    //             'image' => 'gambar3.jpg'
+            
+    //     ]);
     }
 }
