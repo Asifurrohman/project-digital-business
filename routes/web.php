@@ -36,6 +36,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
 Route::get('/checkout/{event}', [CheckoutController::class, 'create'])->name('checkout.create');
 Route::post('/checkout/{event}', [CheckoutController::class, 'store'])->name('checkout.store');
+Route::get('/payment/{order_id}', [\App\Http\Controllers\CheckoutController::class, 'payment'])->name('checkout.payment');
 // Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
 
 
