@@ -98,6 +98,8 @@ class CheckoutController extends Controller
     public function success($order_id){
         $categories = Category::all();
         $transaction = Transaction::where('order_id', $order_id)->firstOrFail();
+
+        // sampai sini belum selesai midtrans
     }
 
     /**
