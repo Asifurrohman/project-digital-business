@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MidtransWebhookController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,7 @@ Route::post('/checkout/{event}', [CheckoutController::class, 'store'])->name('ch
 Route::get('/payment/{order_id}', [CheckoutController::class, 'payment'])->name('checkout.payment');
 // Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
 Route::get('/success/{order_id}', [CheckoutController::class, 'success'])->name('checkout.success');
+Route::post('/midtrans/callback', [MidtransWebhookController::class, 'handle']);
 
 
 

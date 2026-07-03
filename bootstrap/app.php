@@ -17,6 +17,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'admin' => AdminMiddleware::class,
             'prevent-back-history' => PreventBackHistory::class
         ]);
+
+        $middleware->validateCsrfTokens(except: [
+            '/midtrans/callback',
+        ]);   
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
