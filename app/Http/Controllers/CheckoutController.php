@@ -47,15 +47,15 @@ class CheckoutController extends Controller
         $orderId = 'TRX-'.time().'-'.Str::random(5);
         $totalPrice = $event->price + 5000; #5000 biaya atmin
 
-        // $transaction = Transaction::create([
-        //     'event_id' => $event->id,
-        //     'order_id' => $orderId,
-        //     'customer_name' => $request->customer_name,
-        //     'customer_email' => $request->customer_email,
-        //     'customer_phone' => $request->customer_phone,
-        //     'total_price' => $totalPrice,
-        //     'status' => 'Pending'
-        // ]);
+        $transaction = Transaction::create([
+            'event_id' => $event->id,
+            'order_id' => $orderId,
+            'customer_name' => $request->customer_name,
+            'customer_email' => $request->customer_email,
+            'customer_phone' => $request->customer_phone,
+            'total_price' => $totalPrice,
+            'status' => 'Pending'
+        ]);
 
         Config::$serverKey = env('MIDTRANS_SERVER_KEY');
         Config::$isProduction = false;
@@ -99,7 +99,20 @@ class CheckoutController extends Controller
         $categories = Category::all();
         $transaction = Transaction::where('order_id', $order_id)->firstOrFail();
 
-        // sampai sini belum selesai midtrans
+        $serverKey = env('MIDTRANS_SERVER_KEY');
+        $isProduction = false;
+
+        try{
+            $midtransStatus = \Midtrans\Transaction::status($order_id);
+
+            if(in_array($midtransStatus->transaction_status, ['capture', 'settlement'])){
+                $transaction->update(['status' => 'success']);
+            }
+        } catch(\Exception $e){
+            return redirect()->route('home')->with('error', 'Transaksi tidak ditemukan atau gagal diproses oleh sistem pembayaran.');
+        }
+
+        return view('checkout.success', compact('transaction','categories'));
     }
 
     /**
