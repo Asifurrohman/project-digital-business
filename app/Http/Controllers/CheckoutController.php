@@ -106,7 +106,11 @@ class CheckoutController extends Controller
             $midtransStatus = \Midtrans\Transaction::status($order_id);
 
             if(in_array($midtransStatus->transaction_status, ['capture', 'settlement'])){
-                $transaction->update(['status' => 'success']);
+                // Jika belum diubah ke success, update status dan kurangi stok
+                if($transaction->status !== 'success' && $transaction->status !== 'settlement'){
+                    $transaction->update(['status' => 'success']);
+                    Event::where('id', $transaction->event_id)->decrement('stock');
+                }
             }
         } catch(\Exception $e){
             return redirect()->route('home')->with('error', 'Transaksi tidak ditemukan atau gagal diproses oleh sistem pembayaran.');

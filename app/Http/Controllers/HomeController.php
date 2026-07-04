@@ -20,7 +20,15 @@ class HomeController extends Controller
             });
         }
                 
-        $events = $query->get();
+        $events = Event::query()
+            ->where('stock', '>', 0)
+            ->when($request->category_id, function ($query, $categoryId) {
+                $query->where('category_id', $categoryId);
+            })
+            ->with('category')
+            ->latest()
+            ->paginate(10)
+            ->withQueryString();
         $partners = Partner::all();
 
         return view('welcome', compact('events', 'categories', 'partners'));

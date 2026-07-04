@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 
@@ -48,6 +49,9 @@ class MidtransWebhookController extends Controller
     }
 
     private function processSuccess(Transaction $transaction){
-        
+        // Kurangi stok event sebanyak 1
+        if ($transaction->event_id) {
+            Event::where('id', $transaction->event_id)->decrement('stock');
+        }
     }
 }
