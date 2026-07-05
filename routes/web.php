@@ -1,11 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\AuthController;
-use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventController as AdminEventController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\TransactionController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/events/{event}', [EventController::class, 'show'])->name('events.show');
+Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 
 Route::get('/login', function(){
     return redirect()->route('admin.login');
@@ -32,7 +35,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
         // Route::get('/categories', [EventController::class, 'categories'])->name('categories');
 
         Route::resource('/events', AdminEventController::class);
-        Route::resource('/categories', CategoryController::class);
+        Route::resource('/categories', AdminCategoryController::class);
         Route::resource('/partners', PartnerController::class);
         Route::resource('/transactions', TransactionController::class);
     });

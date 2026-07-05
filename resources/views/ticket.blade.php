@@ -20,19 +20,19 @@
                     </svg>
                 </div>
                 <h1 class="text-3xl font-black">Pembayaran Berhasil!</h1>
-                <p class="text-indigo-100 mt-2">Tiket Anda telah terbit dan siap digunakan.</p>
+                <p class="text-amber-100 mt-2">Tiket Anda telah terbit dan siap digunakan.</p>
             </div>
 
             <!-- Ticket Card -->
             <div class="bg-white text-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative">
                 <!-- Ticket Header -->
-                <div class="p-8 bg-indigo-50 border-b-4 border-dashed border-indigo-100 text-center relative">
-                    <p class="text-indigo-600 font-bold uppercase tracking-widest text-xs mb-2">E-Ticket Resmi</p>
+                <div class="p-8 bg-amber-50 border-b-4 border-dashed border-amber-100 text-center relative">
+                    <p class="text-amber-600 font-bold uppercase tracking-widest text-xs mb-2">E-Ticket Resmi</p>
                     <h2 class="text-2xl font-black leading-tight">Jazz Night 2024: A Celebration</h2>
 
                     <!-- Ticket Side Cuts -->
-                    <div class="absolute -left-4 -bottom-4 w-8 h-8 bg-indigo-600 rounded-full"></div>
-                    <div class="absolute -right-4 -bottom-4 w-8 h-8 bg-indigo-600 rounded-full"></div>
+                    <div class="absolute -left-4 -bottom-4 w-8 h-8 bg-amber-600 rounded-full"></div>
+                    <div class="absolute -right-4 -bottom-4 w-8 h-8 bg-amber-600 rounded-full"></div>
                 </div>
 
                 <!-- Ticket Body -->
@@ -86,11 +86,11 @@
 
                 <div class="px-8 pb-8">
                     <button onclick="window.print()"
-                        class="w-full py-4 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg hover:bg-indigo-700 transition">
+                        class="w-full py-4 bg-amber-600 text-white rounded-2xl font-bold shadow-lg hover:bg-amber-700 transition">
                         Cetak / Simpan PDF
                     </button>
                     <a href="index.html"
-                        class="block text-center mt-4 text-slate-500 font-bold hover:text-indigo-600">Kembali ke Beranda</a>
+                        class="block text-center mt-4 text-slate-500 font-bold hover:text-amber-600">Kembali ke Beranda</a>
                 </div>
             </div>
         </div>

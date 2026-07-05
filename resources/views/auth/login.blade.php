@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - AmikomEventHub</title>
+    <title>Admin Login - Stile</title>
     @vite('resources/css/app.css')
     <style> body { font-family: 'Plus Jakarta Sans', sans-serif; } </style>
 </head>
-<body class="bg-indigo-900 text-white min-h-screen flex items-center justify-center p-6">
+<body class="bg-amber-900 text-white min-h-screen flex items-center justify-center p-6">
     <div class="max-w-md w-full bg-white text-slate-900 rounded-[2rem] p-8 shadow2xl">
         <div class="text-center mb-8">
-            <div class="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+            <div class="w-16 h-16 bg-amber-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                 AH
             </div>
             <h1 class="text-2xl font-black">Admin Login</h1>
-            <p class="text-slate-500">Amikom EventHub Dashboard</p>
+            <p class="text-slate-500">Stile Dashboard</p>
         </div>
         
         @if(session('error'))
@@ -36,15 +36,15 @@
                 <label for="" class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">
                     Email
                 </label>
-                <input type="email" name="email" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-600 outline-none transition font-medium" required>
+                <input type="email" name="email" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-amber-500/10 focus:border-amber-600 outline-none transition font-medium" required>
             </div>
             <div class="mt-4">
                 <label for="" class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">
                     password
                 </label>
-                <input type="password" name="password" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-600 outline-none transition font-medium" required>
+                <input type="password" name="password" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-amber-500/10 focus:border-amber-600 outline-none transition font-medium" required>
             </div>
-            <button type="submit" class="mt-8 w-full py-4 bg-indigo-600 text-white rounded-2xl font-black text-xl shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition">
+            <button type="submit" class="mt-8 w-full py-4 bg-amber-600 text-white rounded-2xl font-black text-xl shadow-lg hover:bg-amber-700 transition">
                 Login
             </button>
         </form>

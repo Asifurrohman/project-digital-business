@@ -5,14 +5,14 @@
         <h1 class="text-3xl font-black">Kelola Event</h1>
         <p class="text-slate-500 font-medium">Buat dan atur acara seru Anda di sini.</p>
     </div>
-    <button class="px-6 py-3 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg shadow-indigo-100 hover:bg-indigo-700 active:scale-95 transition">
+    <button class="px-6 py-3 bg-amber-600 text-white rounded-2xl font-bold shadow-lg shadow-amber-100 hover:bg-amber-700 active:scale-95 transition">
         + Tambah Event Baru
     </button>
 </header>
 
 <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden">
     <div class="px-8 py-6 bg-slate-50/50 border-b flex gap-4">
-        <input type="text" placeholder="Cari nama event..." class="flex-1 px-5 py-3 rounded-xl border-slate-200 border bg-white focus:ring-2 focus:ring-indigo-500 outline-none transition">
+        <input type="text" placeholder="Cari nama event..." class="flex-1 px-5 py-3 rounded-xl border-slate-200 border bg-white focus:ring-2 focus:ring-amber-500 outline-none transition">
         <select class="px-5 py-3 rounded-xl border-slate-200 border bg-white outline-none">
             <option>Semua Kategori</option>
             <option>Musik</option>
@@ -42,12 +42,12 @@
                         <p class="text-xs text-slate-400">Musik • 16 Nov 2024</p>
                     </td>
                     <td class="px-8 py-6">
-                        <p class="font-bold text-indigo-600">Rp 150.000</p>
+                        <p class="font-bold text-amber-600">Rp 150.000</p>
                         <p class="text-xs text-slate-400">Stok: 42/100</p>
                     </td>
                     <td class="px-8 py-6">
                         <div class="flex gap-2">
-                            <button class="p-2.5 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition">
+                            <button class="p-2.5 bg-amber-50 text-amber-600 rounded-xl hover:bg-amber-600 hover:text-white transition">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 00-2 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
                                     </path>
@@ -72,12 +72,12 @@
                         <p class="text-xs text-slate-400">Tech • 26 Oct 2024</p>
                     </td>
                     <td class="px-8 py-6">
-                        <p class="font-bold text-indigo-600">Rp 50.000</p>
+                        <p class="font-bold text-amber-600">Rp 50.000</p>
                         <p class="text-xs text-slate-400">Stok: 12/50</p>
                     </td>
                     <td class="px-8 py-6">
                         <div class="flex gap-2">
-                            <button class="p-2.5 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition">
+                            <button class="p-2.5 bg-amber-50 text-amber-600 rounded-xl hover:bg-amber-600 hover:text-white transition">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 00-2 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
                                     </path>

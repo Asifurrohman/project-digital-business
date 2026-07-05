@@ -7,10 +7,10 @@
         <p class="text-slate-500 font-medium">Pantau arus kas dan penjualan tiket Anda.</p>
     </div>
     <div class="flex gap-4">
-        <button class="px-6 py-3 border-2 border-slate-200 rounded-2xl font-bold hover:bg-white hover:border-indigo-600 hover:text-indigo-600 transition">
+        <button class="px-6 py-3 border-2 border-slate-200 rounded-2xl font-bold hover:bg-white hover:border-amber-600 hover:text-amber-600 transition">
             Ekspor Excel
         </button>
-        <button class="px-6 py-3 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg hover:bg-indigo-700 transition">
+        <button class="px-6 py-3 bg-amber-600 text-white rounded-2xl font-bold shadow-lg hover:bg-amber-700 transition">
             Unduh PDF
         </button>
     </div>
@@ -19,7 +19,7 @@
 <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden">
     <div class="px-8 py-6 bg-slate-50/50 border-b flex flex-wrap gap-4 items-center">
         <div class="flex-1 min-w-75 flex gap-2">
-            <input type="text" placeholder="Cari Order ID, Nama, atau Email..." class="flex-1 px-5 py-3 rounded-xl border-slate-200 border bg-white focus:ring-2 focus:ring-indigo-500 outline-none transition uppercase text-sm font-medium tracking-wide">
+            <input type="text" placeholder="Cari Order ID, Nama, atau Email..." class="flex-1 px-5 py-3 rounded-xl border-slate-200 border bg-white focus:ring-2 focus:ring-amber-500 outline-none transition uppercase text-sm font-medium tracking-wide">
         </div>
         <div class="flex gap-2">
             <select class="px-5 py-3 rounded-xl border-slate-200 border bg-white outline-none text-sm font-bold">
@@ -51,7 +51,7 @@
             <tbody class="divide-y border-t">
                 <tr class="hover:bg-slate-50/50 transition">
                     <td class="px-8 py-6">
-                        <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-lg text-sm">#TRX-99210</span>
+                        <span class="font-mono font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-lg text-sm">#TRX-99210</span>
                     </td>
                     <td class="px-8 py-6">
                         <p class="font-bold text-slate-800">Donni Prabowo</p>
@@ -94,7 +94,7 @@
                 <tr class="hover:bg-slate-50/50 transition">
                     <td class="px-8 py-6">
                         <span
-                        class="font-mono font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-lg text-sm">#TRX-99208</span>
+                        class="font-mono font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-lg text-sm">#TRX-99208</span>
                     </td>
                     <td class="px-8 py-6">
                         <p class="font-bold text-slate-800">Budi Santoso</p>
@@ -122,7 +122,7 @@
         <p class="text-sm text-slate-500 font-medium">Menampilkan 3 dari 124 transaksi</p>
         <div class="flex gap-2">
             <button class="px-4 py-2 border rounded-xl hover:bg-white transition text-sm font-bold opacity-50 cursor-not-allowed">Previous</button>
-            <button class="px-4 py-2 bg-indigo-600 text-white rounded-xl shadow-md text-sm font-bold">1</button>
+            <button class="px-4 py-2 bg-amber-600 text-white rounded-xl shadow-md text-sm font-bold">1</button>
             <button class="px-4 py-2 border rounded-xl hover:bg-white transition text-sm font-bold">2</button>
             <button class="px-4 py-2 border rounded-xl hover:bg-white transition text-sm font-bold">Next</button>
         </div>

@@ -10,7 +10,7 @@
         @method('PUT')
         <div>
             <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Nama Kategori</label>
-            <input type="text" name="name" value="{{ old('name', $category->name) }}" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-600 outline-nonetransition font-medium" required>
+            <input type="text" name="name" value="{{ old('name', $category->name) }}" class="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-amber-500/10 focus:border-amber-600 outline-nonetransition font-medium" required>
             @error('name') 
             <span class="text-red-500 text-sm mt-1">
                 {{ $message }}
@@ -23,7 +23,7 @@
                 Batal
             </a>
             
-            <button type="submit" class="cursor-pointer px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg shadow-indigo-100 hover:bg-indigo-700 transition">
+            <button type="submit" class="cursor-pointer px-8 py-4 bg-amber-600 text-white rounded-2xl font-bold shadow-lg shadow-amber-100 hover:bg-amber-700 transition">
                 Update Kategori
             </button>
         </div>

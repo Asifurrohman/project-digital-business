@@ -14,44 +14,44 @@
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 flex min-h-screen">
-    <aside class="w-64 bg-indigo-900 text-indigo-100 flex flex-col p-6 space-y-8 sticky top-0 h-screen">
+    <aside class="w-64 bg-amber-900 text-amber-100 flex flex-col p-6 space-y-8 sticky top-0 h-screen">
         <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-indigo-900 font-bold text-xl">
+            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-amber-900 font-bold text-xl">
                 AH
             </div>
-            <span class="text-xl font-bold text-white tracking-tight">AmikomEventHub</span>
+            <span class="text-xl font-bold text-white tracking-tight">Stile</span>
         </div>
 
         <nav class="flex-1 space-y-2">
-            <p class="text-[10px] font-bold uppercase tracking-widest text-indigo-400 mb-4 px-2">Main Menu</p>
-            <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.dashboard') ? 'bg-indigo-800 text-white' : 'hover:bg-indigo-800' }} rounded-xl font-bold transition">
-                <x-icon name="material-symbols:dashboard-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.events.*') ? 'text-indigo-300' : 'text-indigo-400' }}" />
+            <p class="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-4 px-2">Main Menu</p>
+            <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.dashboard') ? 'bg-amber-800 text-white' : 'hover:bg-amber-800' }} rounded-xl font-bold transition">
+                <x-icon name="material-symbols:dashboard-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.events.*') ? 'text-amber-300' : 'text-amber-400' }}" />
                 Dashboard
             </a>
-            <a href="{{ route('admin.events.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.events.*') ? 'bg-indigo-800 text-white' : 'hover:bg-indigo-800' }} rounded-xl font-bold transition">
-                <x-icon name="material-symbols:event-note-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.events.*') ? 'text-indigo-300' : 'text-indigo-400' }}" />
+            <a href="{{ route('admin.events.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.events.*') ? 'bg-amber-800 text-white' : 'hover:bg-amber-800' }} rounded-xl font-bold transition">
+                <x-icon name="material-symbols:event-note-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.events.*') ? 'text-amber-300' : 'text-amber-400' }}" />
                 Kelola Event
             </a>
-            <a href="{{ route('admin.categories.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.categories.*') ? 'bg-indigo-800 text-white' : 'hover:bg-indigo-800' }} rounded-xl font-bold transition">
-                <x-icon name="material-symbols:category-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.categories.*') ? 'text-indigo-300' : 'text-indigo-400' }}" />
+            <a href="{{ route('admin.categories.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.categories.*') ? 'bg-amber-800 text-white' : 'hover:bg-amber-800' }} rounded-xl font-bold transition">
+                <x-icon name="material-symbols:category-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.categories.*') ? 'text-amber-300' : 'text-amber-400' }}" />
                 Kelola Kategori
             </a>
-            <a href="{{ route('admin.partners.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.partners.*') ? 'bg-indigo-800 text-white' : 'hover:bg-indigo-800' }} rounded-xl font-bold transition">
-                <x-icon name="material-symbols:handshake-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.partners.*') ? 'text-indigo-300' : 'text-indigo-400' }}" />
+            <a href="{{ route('admin.partners.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.partners.*') ? 'bg-amber-800 text-white' : 'hover:bg-amber-800' }} rounded-xl font-bold transition">
+                <x-icon name="material-symbols:handshake-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.partners.*') ? 'text-amber-300' : 'text-amber-400' }}" />
                 Kelola Partner
             </a>
-            {{-- <a href="{{ route('admin.transactions.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.transactions.*') ? 'bg-indigo-800 text-white' : 'hover:bg-indigo-800' }} rounded-xl font-bold transition"> --}}
-            <a href="{{ route('admin.transactions.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.transactions.*') ? 'bg-indigo-800 text-white' : 'hover:bg-indigo-800' }} rounded-xl font-bold transition">
-                <x-icon name="material-symbols:receipt-long-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.transactions.*') ? 'text-indigo-300' : 'text-indigo-400' }}" />
+            {{-- <a href="{{ route('admin.transactions.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.transactions.*') ? 'bg-amber-800 text-white' : 'hover:bg-amber-800' }} rounded-xl font-bold transition"> --}}
+            <a href="{{ route('admin.transactions.index') }}" class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.transactions.*') ? 'bg-amber-800 text-white' : 'hover:bg-amber-800' }} rounded-xl font-bold transition">
+                <x-icon name="material-symbols:receipt-long-outline-rounded" class="w-5 h-5 {{ request()->routeIs('admin.transactions.*') ? 'text-amber-300' : 'text-amber-400' }}" />
                 Laporan Transaksi
             </a>
         </nav>
 
-        <div class="pt-6 border-t border-indigo-800">
+        <div class="pt-6 border-t border-amber-800">
             <form action="{{ route('admin.logout') }}" method="POST">
                 @csrf
-                <button type="submit" class="cursor-pointer w-full flex items-center gap-3 px-4 py-3 text-indigo-300 hover:text-white transition font-medium text-left">
-                    <x-icon name="ic:round-log-out" class="w-5 h-5 text-indigo-400" />
+                <button type="submit" class="cursor-pointer w-full flex items-center gap-3 px-4 py-3 text-amber-300 hover:text-white transition font-medium text-left">
+                    <x-icon name="ic:round-log-out" class="w-5 h-5 text-amber-400" />
                     Keluar
                 </button>
             </form>

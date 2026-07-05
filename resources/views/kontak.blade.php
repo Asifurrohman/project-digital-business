@@ -13,7 +13,7 @@
         <p class="text-slate-500 mb-6">
             Email: akun.asifurrohman@gmail.
         </p>
-        <a href="#" class="inline-block bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-indigo-700 hover:shadow-md transition duration-300">
+        <a href="#" class="inline-block bg-amber-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-amber-700 hover:shadow-md transition duration-300">
             Kembali ke 
         </a>
     </div>

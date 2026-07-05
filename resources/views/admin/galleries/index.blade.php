@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Daftar Galeri - AmikomEventHub</title>
+<title>Daftar Galeri - Stile</title>
 </head>
 <body>
 <h2>Daftar Foto Dokumentasi (Galeri) Nama / NIM</h2>
@@ -48,7 +48,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Tambah Foto - AmikomEventHub</title>
+<title>Tambah Foto - Stile</title>
 </head>
 <body>
 

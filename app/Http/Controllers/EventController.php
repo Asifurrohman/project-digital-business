@@ -10,17 +10,19 @@ class EventController extends Controller
 {
     public function index(Request $request){
         $categories = Category::all();
-
-        $events = Event::query()
+        
+        $query = Event::with('category')
             ->where('stock', '>', 0)
-            ->when($request->search, function($query, $search){
-                $query->where('title', 'like', "%{$search}%");
-            })
-            ->when($request->category_id, function ($query, $categoryId) {
-                $query->where('category_id', $categoryId);
-            })
-            ->with('category')
-            ->latest()
+            ->where('date', '>=', now())
+            ->orderBy('date', 'asc');
+        
+        if ($request->has('category') && $request->category != '') {
+            $query->whereHas('category', function ($q) use ($request) {
+                $q->where('slug', $request->category);
+            });
+        }
+                
+        $events = $query
             ->paginate(10)
             ->withQueryString();
 

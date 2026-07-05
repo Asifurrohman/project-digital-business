@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="mb-4 text-right">
-    <a href="{{ route('admin.events.create') }}" class="cursor-pointer inline-flex justify-center items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg shadow-indigo-100 hover:bg-indigo-700 active:scale-95 transition">
+    <a href="{{ route('admin.events.create') }}" class="cursor-pointer inline-flex justify-center items-center gap-2 px-6 py-3 bg-amber-600 text-white rounded-2xl font-bold shadow-lg shadow-amber-100 hover:bg-amber-700 active:scale-95 transition">
         <x-icon name="material-symbols:add-rounded" class="w-5 h-5" />
         Tambah Event Baru
     </a>
@@ -14,7 +14,7 @@
 <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden">
     <div class="px-8 py-6 bg-slate-50/50 border-b flex gap-4">
         <form action="{{ route('admin.events.index') }}" method="GET" class="flex gap-2 w-full">
-            <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari nama event..." class="flex-1 px-5 py-3 rounded-xl border-slate-200 border bg-white focus:ring-2 focus:ring-indigo-500 outline-none transition">
+            <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari nama event..." class="flex-1 px-5 py-3 rounded-xl border-slate-200 border bg-white focus:ring-2 focus:ring-amber-500 outline-none transition">
             
             <select name="category_id" class="px-5 py-3 rounded-xl border-slate-200 border bg-white outline-none">
                 <option value="">Semua Kategori</option>
@@ -25,7 +25,7 @@
                 @endforeach
             </select>
             
-            <button type="submit" class="cursor-pointer px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition">
+            <button type="submit" class="cursor-pointer px-6 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 transition">
                 Cari
             </button>
         </form>
@@ -63,14 +63,14 @@
                     </td>
                     <td class="px-8 py-6">
                         
-                        <p class="font-bold text-indigo-600">Rp {{ number_format($event->price, 0, ',', '.') }}</p>
+                        <p class="font-bold text-amber-600">Rp {{ number_format($event->price, 0, ',', '.') }}</p>
                         
                         <p class="text-xs text-slate-400">Stok: {{ $event->stock }}</p>
                         
                     </td>
                     <td class="px-8 py-6">
                         <div class="flex gap-2">
-                            <a href="{{ route('admin.events.edit', $event->id) }}" class="cursor-pointer p-2.5 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition">
+                            <a href="{{ route('admin.events.edit', $event->id) }}" class="cursor-pointer p-2.5 bg-amber-50 text-amber-600 rounded-xl hover:bg-amber-600 hover:text-white transition">
                                 <x-icon name="material-symbols:edit-square-outline-rounded" class="w-5 h-5" />
                             </a>
                             <form action="{{ route('admin.events.destroy', $event) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus acara ini?');">

@@ -21,7 +21,7 @@
                 @forelse($transactions as $trx)
                     <tr class="hover:bg-slate-50/50 transition {{ $trx->status == 'pending' ? 'text-slate-400' : '' }}">
                         <td class="px-8 py-6">
-                            <span class="font-mono font-bold px-3 py-1 rounded-lg text-sm {{ $trx->status == 'pending' ? 'bg-slate-100' : 'text-indigo-600 bg-indigo-50' }}">
+                            <span class="font-mono font-bold px-3 py-1 rounded-lg text-sm {{ $trx->status == 'pending' ? 'bg-slate-100' : 'text-amber-600 bg-amber-50' }}">
                                 {{ $trx->order_id }}
                             </span>
                         </td>

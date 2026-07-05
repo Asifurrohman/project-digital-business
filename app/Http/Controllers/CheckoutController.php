@@ -102,21 +102,67 @@ class CheckoutController extends Controller
         $serverKey = env('MIDTRANS_SERVER_KEY');
         $isProduction = false;
 
-        try{
-            $midtransStatus = \Midtrans\Transaction::status($order_id);
+        Config::$serverKey = env('MIDTRANS_SERVER_KEY');
+        Config::$isProduction = false;
+        Config::$isSanitized = true;
+        Config::$is3ds = true;
 
-            if(in_array($midtransStatus->transaction_status, ['capture', 'settlement'])){
-                // Jika belum diubah ke success, update status dan kurangi stok
-                if($transaction->status !== 'success' && $transaction->status !== 'settlement'){
-                    $transaction->update(['status' => 'success']);
-                    Event::where('id', $transaction->event_id)->decrement('stock');
+        try {
+            $status = \Midtrans\Transaction::status($order_id);
+            
+            if ($status) {
+                $trx_status = is_array($status) ? ($status['transaction_status'] ?? '') : ($status->transaction_status ?? '');
+                $vaNumber = data_get($status, 'permata_va_number')
+                    ?? data_get($status, 'va_numbers.0.va_number')
+                    ?? data_get($status, 'bill_key');
+
+                if ($vaNumber && !$transaction->va_number) {
+                    $transaction->update(['va_number' => $vaNumber]);
+                }
+                
+                if (in_array($trx_status, ['settlement', 'capture'])) {
+                    if (strtolower($transaction->status) === 'pending') {
+                        $transaction->update(['status' => 'success']);
+                        
+                        if ($transaction->event && $transaction->event->stock > 0) {
+                            $transaction->event->stock = $transaction->event->stock - 1;
+                            $transaction->event->save();
+                            
+                            try {
+                                // \Illuminate\Support\Facades\Mail::to($transaction->customer_email)
+                                \Illuminate\Support\Facades\Mail::to('akun.asifurrohman@gmail.com')
+                                    ->send(new \App\Mail\EventTicketMail($transaction));
+                            } catch (\Exception $e) {
+                                \Log::error('Gagal mengirim email E-Ticket secara manual (Bypass): ' . $e->getMessage());
+                            }
+                        }
+                    }
                 }
             }
-        } catch(\Exception $e){
+        } catch (\Exception $e) {
+            // Jika terjadi error dari API Midtrans (transaksi tidak valid), kembalikan ke beranda
             return redirect()->route('home')->with('error', 'Transaksi tidak ditemukan atau gagal diproses oleh sistem pembayaran.');
         }
 
-        return view('checkout.success', compact('transaction','categories'));
+        return view('checkout.success', compact('transaction', 'categories'));
+
+
+
+        // try{
+        //     $midtransStatus = \Midtrans\Transaction::status($order_id);
+
+        //     if(in_array($midtransStatus->transaction_status, ['capture', 'settlement'])){
+        //         // Jika belum diubah ke success, update status dan kurangi stok
+        //         if($transaction->status !== 'success' && $transaction->status !== 'settlement'){
+        //             $transaction->update(['status' => 'success']);
+        //             Event::where('id', $transaction->event_id)->decrement('stock');
+        //         }
+        //     }
+        // } catch(\Exception $e){
+        //     return redirect()->route('home')->with('error', 'Transaksi tidak ditemukan atau gagal diproses oleh sistem pembayaran.');
+        // }
+
+        // return view('checkout.success', compact('transaction','categories'));
     }
 
     /**
