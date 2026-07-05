@@ -26,34 +26,24 @@ class DatabaseSeeder extends Seeder
         //     'role' => 'admin'
         // ]);
 
-        $roles = [
-            ['name' => 'admin'],
-            ['name' => 'vendor'],
-            ['name' => 'user']
-        ];
-
-        foreach($roles as $role) {
-            Role::create($role);
-        }
-
         $users = [
             [
                 'name' => 'Gremyacip',
                 'email' => 'akun.asifurrohman@gmail.com',
                 'password' => bcrypt('password'),
-                'role_id' => 1
+                'role' => 'admin'
             ],
             [
                 'name' => 'anu',
                 'email' => 'anu@gmail.com',
                 'password' => bcrypt('password'),
-                'role_id' => 2
+                'role' => 'vendor'
             ],
             [
                 'name' => 'fah',
                 'email' => 'fah@gmail.com',
                 'password' => bcrypt('password'),
-                'role_id' => 3
+                'role' => 'user'
             ],
         ];
 
